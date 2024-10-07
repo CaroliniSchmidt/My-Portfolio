@@ -45,7 +45,6 @@ welcome-section {
     background: linear-gradient(var(--cor1),var(--cor2));
     font-size: 20px;
     box-shadow: 2px 2px 5px  #4e5761;
-    
 }
 ul{
     display: flex;
@@ -54,12 +53,12 @@ ul{
 li{
     list-style-type: none;
     padding: 10px; 
-    font-family: var(--font2);
-    transition: 0.5s;
 }
-ul>li:hover .buttom:hover{
+li:hover{
     background: var(--cor1);
+    padding: 20px 5px;
 }
+
 a {
     color: #1F2328;
 }
@@ -68,6 +67,8 @@ body {
     font-size: 100%;
     background: linear-gradient(50deg, white, #B0A2A9, #607CB0 );
     text-align: justify;
+    font-family: var(--font2);
+
 }
 
 main{
@@ -83,14 +84,12 @@ main{
     text-align: justify;
     font-family: var(--font2);
     margin: 10vh 0;
-    
 }
 
 
 img {
     width: 20%;
     box-shadow: 2px 2px 5px  #4e5761;
-
 }
 
 @keyframes animate {
@@ -110,23 +109,67 @@ img {
     flex-wrap: nowrap;
     justify-content: space-around;
     flex-direction: column;
-
-
+}
+.site-flowers {
+    width: 200px;
+    height: 250px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 2px 2px 5px  #4e5761;
+    background: var(--cor3);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: var(--font1);
+    font-size: 18px;
+}
+.site-flowers:hover, .btm:hover {
+    background: linear-gradient(var(--cor1),var(--cor2));
 }
 .content3 {
     font-family: var(--font2);
+    width:;
     margin: 30px 0;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap:10px;
+    background-color: #bcaab37a;
+    box-shadow: 2px 2px 5px  #4e5761;
+    border-radius: 20px;
+    padding: 30px;
+
 }
 
-.box-text {
+.input-single {
+    position: relative;
+    margin: 5px;
+    
+}
+.input label{
+    position: absolute;
+    top: 0;
+    bottom: 5px;
     border-radius: 5%;
     padding: 5px;
-    
+    font-family: var(--font2);
+}
+.input {
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #4e5761;
+    background-color: #bcaab37a;
+    padding: 5px;
+    outline: 0;
+
+}
+
+.btm {
+    padding: 5px 15px;
+    margin: 5px;
+    border-radius: 5%;
+    font-family: var(--font1);
 }
 
 .fa-brands {
@@ -140,7 +183,8 @@ img {
 }
 .fa-free-code-camp {
     color: white;
-    background: black;
+    background: rgba(27, 26, 26, 0.769);
+    border-radius: 50%;
 }
 .fa-github {
     color: #1F2328;
@@ -149,4 +193,6 @@ img {
 footer {
     text-align: center;
     border-top: 0.5px solid #51553A;
+    margin: 10px;
+    background: linear-gradient(var(--cor1),var(--cor2));
 }
