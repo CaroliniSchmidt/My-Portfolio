@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Righteous&display=swap');
+
+@media (max-widht: 1200px) {
+    body {
+    width: auto;
+    height: auto;
+}
+}
+@media (max-widht: 600px) {
+    body {
+        width: auto;
+        height: auto;
+    }
+}
+:root{
+    --font1: "Righteous", sans-serif;
+    --font2: "Nunito", sans-serif;
+    --font3: "Kalam", cursive;
+    --cor1: #B0A2A9;
+    --cor2: #607CB0;
+    
+}
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+welcome-section {
+    height: 100vw;
+    margin: 20px;
+
+}
+
+#navbar {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    transition: 0.5s;
+    background: linear-gradient(var(--cor1),var(--cor2));
+    font-size: 20px;
+    box-shadow: 2px 2px 5px  #4e5761;
+    
+}
+ul{
+    display: flex;
+}
+
+li{
+    list-style-type: none;
+    padding: 10px; 
+    font-family: var(--font2);
+    transition: 0.5s;
+}
+ul>li:hover .buttom:hover{
+    background: var(--cor1);
+}
+a {
+    color: #1F2328;
+}
+body {
+    width: auto;
+    font-size: 100%;
+    background: linear-gradient(50deg, white, #B0A2A9, #607CB0 );
+    text-align: justify;
+}
+
+main{
+    padding: 80px 20px 20px;
+    margin: 0;
+}
+
+.content {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: justify;
+    font-family: var(--font2);
+    margin: 10vh 0;
+    
+}
+
+
+img {
+    width: 20%;
+    box-shadow: 2px 2px 5px  #4e5761;
+
+}
+
+@keyframes animate {
+    0% {
+        filter: hue-rotate(0deg) brightness(100%) blur(10px);
+    }
+    100% {
+        filter: hue-rotate(360deg) brightness(100%) blur(10px);
+    }
+}
+
+.content2 {
+    font-family: var(--font2);
+    margin: 40px 0;
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    flex-direction: column;
+
+
+}
+.content3 {
+    font-family: var(--font2);
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+}
+
+.box-text {
+    border-radius: 5%;
+    padding: 5px;
+    
+}
+
+.fa-brands {
+    margin: 10px;
+    size: 20px;
+    width: 20px;
+}
+
+.fa-linkedin-in {
+    color: #0B65C2;
+}
+.fa-free-code-camp {
+    color: white;
+    background: black;
+}
+.fa-github {
+    color: #1F2328;
+}
+
+footer {
+    text-align: center;
+    border-top: 0.5px solid #51553A;
+}
