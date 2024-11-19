@@ -18,6 +18,11 @@
     --font3: "Kalam", cursive;
     --cor1: #B0A2A9;
     --cor2: #607CB0;
+    --cor3: #a67c73; /*Um tom mais terroso, ótimo para texto, títulos ou botões destacados.*/
+    --cor4: #d8a2a3; /*Um tom suave, ideal para fundos de seções ou botões secundários.*/
+    --cor5: #f3d9ce; /*Um tom claro, perfeito como cor de fundo principal, dando leveza ao site.*/
+    --cor6: #c2b1af; /*Um tom neutro, ideal para bordas, linhas ou elementos sutis.*/
+    --cor7: #f2e6e1; /*Um tom delicado, ótimo para realces ou áreas com pouco texto.*/ 
     
 }
 * {
@@ -42,30 +47,43 @@ welcome-section {
     align-items: center;
     justify-content: space-around;
     transition: 0.5s;
-    background: linear-gradient(var(--cor1),var(--cor2));
+    background: var(--cor3);
+    color: var(--cor7);
     font-size: 20px;
-    box-shadow: 2px 2px 5px  #4e5761;
+    box-shadow: 2px 2px 5px var(--cor3);
 }
 ul{
     display: flex;
+    
 }
 
 li{
     list-style-type: none;
     padding: 10px; 
+    
 }
 li:hover{
-    background: var(--cor1);
+    background: var(--cor6);
     padding: 20px 5px;
+    border-radius: 10px;
 }
 
-a {
-    color: #1F2328;
+h2, .text-window {
+    color: var(--cor3);
 }
+
+label, a, h3, h1{
+    color: var(--cor7)
+}
+
+p {
+    color: var(--cor6);
+}
+
 body {
     width: auto;
     font-size: 100%;
-    background: linear-gradient(50deg, white, #B0A2A9, #607CB0 );
+    background: var(--cor5);
     text-align: justify;
     font-family: var(--font2);
 
@@ -89,7 +107,7 @@ main{
 
 img {
     width: 20%;
-    box-shadow: 2px 2px 5px  #4e5761;
+    box-shadow: 2px 2px 5px var(--cor3);
 }
 
 @keyframes animate {
@@ -113,10 +131,9 @@ img {
 .site-flowers {
     width: 200px;
     height: 250px;
-    border: 1px solid black;
     border-radius: 10px;
     margin: 10px;
-    box-shadow: 2px 2px 5px  #4e5761;
+    box-shadow: 2px 2px 5px var(--cor3);
     background: var(--cor3);
     display: flex;
     align-items: center;
@@ -124,8 +141,9 @@ img {
     font-family: var(--font1);
     font-size: 18px;
 }
-.site-flowers:hover, .btm:hover {
-    background: linear-gradient(var(--cor1),var(--cor2));
+.site-flowers:hover, .btn:hover {
+    background: var(--cor6);
+    
 }
 .content3 {
     font-family: var(--font2);
@@ -135,8 +153,8 @@ img {
     align-items: center;
     justify-content: center;
     gap:10px;
-    background-color: #bcaab37a;
-    box-shadow: 2px 2px 5px  #4e5761;
+    background-color: var(--cor3);
+    box-shadow: 2px 2px 5px var(--cor3);
     border-radius: 20px;
     padding: 30px;
 
@@ -158,18 +176,23 @@ img {
 .input {
     width: 100%;
     border: 0;
-    border-bottom: 2px solid #4e5761;
-    background-color: #bcaab37a;
+    border-bottom: 2px solid var(--cor3);
+    border-radius: 10px;
+    color: var(--cor6);
+    background-color: whitesmoke;
     padding: 5px;
     outline: 0;
 
 }
 
-.btm {
+.btn {
     padding: 5px 15px;
     margin: 5px;
-    border-radius: 5%;
+    border-radius: 10px;
     font-family: var(--font1);
+    color: var(--cor6);
+    background-color: whitesmoke;
+    border: 1px solid var(--cor3);
 }
 
 .fa-brands {
@@ -194,5 +217,7 @@ footer {
     text-align: center;
     border-top: 0.5px solid #51553A;
     margin: 10px;
-    background: linear-gradient(var(--cor1),var(--cor2));
+    background: var(--cor3);
+    color: var(--cor7);
+
 }
