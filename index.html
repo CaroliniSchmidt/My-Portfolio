@@ -1,66 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portifolio Carolini</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/ca26b45d74.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3.0.0/dist/emailjs.min.js"></script>
 </head>
 
 <body>
-    <header id="welcome-section">
-        <nav id="navbar">
-            <h1 class="font3">Hi, Welcome!</h1>
+    <!-- Header com navegação -->
+    <header>
+        <div class="logo">Carolini Schmidt</div>
+        <nav>
             <ul>
-                <li><a class="buttom" href="#about-me">About me</a></li>
-                <li><a class="buttom" href="#projects">My projects</a></li>
-                <li><a class="buttom" href="#contact">Contact</a></li>
+                <li><a href="#about">Sobre Mim</a></li>
+                <li><a href="#courses">Cursos</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact">Contato</a></li>
+                <button id="darkModeToggle" class="dark-mode-toggle">🌙</button>
             </ul>
+
         </nav>
     </header>
-    <main>
-        <section class="content" id="about-me">
-            <div>
-                <h2 class="text-window">About me..</h2>
-                <p class="text-window">Hello and welcome to my page!</p>
-                <p class="text-window"> My name is Carol and I'm a developer under construction!</p>
+
+    <!-- Seção sobre mim -->
+    <section id="about">
+        <div class="container">
+            <img src="images/357005712_3085375201756029_5291778982112144651_n.jpg" alt="Minha Foto"
+                class="profile-photo">
+            <div class="info">
+                <h1>Sobre Mim</h1>
+                <p>Sou uma profissional em transição para a área de tecnologia, apaixonada por inovação e
+                    desenvolvimento web. Com uma sólida base em administração e experiência em gestão de produção, trago
+                    habilidades estratégicas e organizacionais para o mundo da tecnologia. Atualmente, estou
+                    aprofundando meus conhecimentos em JavaScript, Python, HTML e CSS, com certificações pelo
+                    freeCodeCamp e foco em desenvolvimento Front-End.
+
+                    Minha experiência liderando uma empresa de móveis planejados me proporcionou uma visão analítica e
+                    um mindset orientado à solução de problemas, características essenciais para a programação. Estou
+                    sempre em busca de novos desafios e oportunidades para aplicar minhas habilidades técnicas e
+                    criativas no desenvolvimento de interfaces modernas e responsivas.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/carolini.schmidt/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="www.linkedin.com/in/carolini-schmidt" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/CaroliniSchmidt" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
             </div>
-            <img src="images/357005712_3085375201756029_5291778982112144651_n.jpg" alt="Foto de perfil.">
-        </section>
-        <section class="content2" id="projects">
-            <h2 class="text-window">My projects</h2>
-            <a href="https://carolinischmidt.github.io/Page.flowers/" class="project-tile">
+        </div>
+    </section>
+
+    <!-- Seção Cursos -->
+    <section id="courses">
+        <h2>Meus Cursos</h2>
+        <div class="course-list">
+            <div class="course-item">
+                <h3>Responsive Web Design</h3>
+                <p>Formação focada no desenvolvimento de interfaces modernas e acessíveis, cobrindo HTML5, CSS3 e técnicas avançadas de responsividade. Inclui conceitos como Flexbox, Grid, Media Queries e boas práticas para tornar os sites adaptáveis a diferentes dispositivos e telas.</p>
+            </div>
+            <div class="course-item">
+                <h3>JavaScript Algorithms and Data Structures</h3>
+                <p>Certificação que abrange conceitos fundamentais do JavaScript, incluindo estrutura de dados, manipulação de arrays e objetos, programação funcional e orientada a eventos. O curso também explora algoritmos clássicos, como busca, ordenação e recursão, além de boas práticas de código limpo e eficiente.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Projetos -->
+    <section id="projects">
+        <h2>Meus Projetos</h2>
+        <div class="projects-container">
+            <div class="project-item">
+                <a href="https://carolinischmidt.github.io/Page.flowers/" class="project-tile">
                 <div class="site-flowers">
-                    <div class="text-flowers">Flowers page</div>
+                    <div class="text-flowers">Flowers page 🌸</div>
                 </div>
             </a>
-        </section>
-        <section class="content3" id="contact"><div>
-            <h3>Contact</h2>
-            <div class="input-single"><input id="name" class="input" type="text" required><label
-                    for="name">Your Name</label></div>
-            <div class="input-single"><input id="email" class="input" type="email" required><label
-                    for="name">Your Email</label></div>
-            <div class="input-single"><input id="text" class="input" type="text" required><label
-                    for="name">Leave a message for me!</label></div>
-            <input class="btn" type="submit" value="submit">
+            </div>
+            <div class="project-item">
+                <h3>Projeto 2</h3>
+                <p>Descrição do projeto...</p>
+            </div>
         </div>
-        </section>
-    </main>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contact">
+        <h2>Contato</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Seu Nome" required>
+            <input type="email" id="email" placeholder="Seu Email" required>
+            <textarea id="message" placeholder="Sua Mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+            <div id="form-message"></div>
+        </form>
+    </section>
+
     <footer>
-        <a id="profile-link" target="_blank" href="https://www.linkedin.com/in/carolini-schmidt-damas-marotto-209a571b9/"><i
-                class="fa-brands fa-linkedin-in"></i></a>
-        <a id="profile-link" target="_blank" href="https://github.com/CaroliniSchmidt"><i class="fa-brands fa-github"></i>
-        </a>
-        <a id="profile-link" target="_blank" href="https://www.freecodecamp.org/CaroliniSchmidt"><i class="fa-brands fa-free-code-camp"></i>
-        </a>
-        <h3 class="medieval">Carolini Schmidt 2024</h3>
+        <p>© 2025 Carolini Schmidt - Todos os direitos reservados.</p>
     </footer>
 
-    <script></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

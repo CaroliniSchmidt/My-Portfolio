@@ -1,223 +1,262 @@
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
 
-@media (max-widht: 1200px) {
-    body {
-    width: auto;
-    height: auto;
+:root {
+    --primary-color: #1a1a1a;
+    --secondary-color: #f5f5f5;
+    --accent-color: #c19a6b;
+    --text-color: #333;
+    --button-hover: #a67c52;
 }
-}
-@media (max-widht: 600px) {
-    body {
-        width: auto;
-        height: auto;
-    }
-}
-:root{
-    --font1: "Righteous", sans-serif;
-    --font2: "Nunito", sans-serif;
-    --font3: "Kalam", cursive;
-    --cor1: #B0A2A9;
-    --cor2: #607CB0;
-    --cor3: #a67c73; /*Um tom mais terroso, ótimo para texto, títulos ou botões destacados.*/
-    --cor4: #d8a2a3; /*Um tom suave, ideal para fundos de seções ou botões secundários.*/
-    --cor5: #f3d9ce; /*Um tom claro, perfeito como cor de fundo principal, dando leveza ao site.*/
-    --cor6: #c2b1af; /*Um tom neutro, ideal para bordas, linhas ou elementos sutis.*/
-    --cor7: #f2e6e1; /*Um tom delicado, ótimo para realces ou áreas com pouco texto.*/ 
-    
-}
+
 * {
-    padding: 0;
     margin: 0;
-    text-decoration: none;
+    padding: 0;
     box-sizing: border-box;
-}
-
-welcome-section {
-    height: 100vw;
-    margin: 20px;
-
-}
-
-#navbar {
-    position: fixed;
-    width: 100%;
-    height: 70px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    transition: 0.5s;
-    background: var(--cor3);
-    color: var(--cor7);
-    font-size: 20px;
-    box-shadow: 2px 2px 5px var(--cor3);
-}
-ul{
-    display: flex;
-    
-}
-
-li{
-    list-style-type: none;
-    padding: 10px; 
-    
-}
-li:hover{
-    background: var(--cor6);
-    padding: 20px 5px;
-    border-radius: 10px;
-}
-
-h2, .text-window {
-    color: var(--cor3);
-}
-
-label, a, h3, h1{
-    color: var(--cor7)
-}
-
-p {
-    color: var(--cor6);
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    width: auto;
-    font-size: 100%;
-    background: var(--cor5);
-    text-align: justify;
-    font-family: var(--font2);
-
+    background: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.6;
 }
 
-main{
-    padding: 80px 20px 20px;
-    margin: 0;
-}
-
-.content {
+/* ===== HEADER ===== */
+header {
+    background: var(--primary-color);
+    color: white;
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    text-align: justify;
-    font-family: var(--font2);
-    margin: 10vh 0;
+    padding: 20px 10%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-img {
-    width: 20%;
-    box-shadow: 2px 2px 5px var(--cor3);
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: bold;
 }
 
-@keyframes animate {
-    0% {
-        filter: hue-rotate(0deg) brightness(100%) blur(10px);
-    }
-    100% {
-        filter: hue-rotate(360deg) brightness(100%) blur(10px);
-    }
-}
-
-.content2 {
-    font-family: var(--font2);
-    margin: 40px 0;
-    align-items: center;
+nav ul {
+    list-style: none;
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    flex-direction: column;
+    gap: 20px;
 }
-.site-flowers {
-    width: 200px;
-    height: 250px;
-    border-radius: 10px;
-    margin: 10px;
-    box-shadow: 2px 2px 5px var(--cor3);
-    background: var(--cor3);
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+.navbar {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    font-family: var(--font1);
-    font-size: 18px;
+    justify-content: space-between;
 }
-.site-flowers:hover, .btn:hover {
-    background: var(--cor6);
-    
+
+/* ===== SEÇÃO SOBRE MIM ===== */
+.container {
+    margin-top: 28px;
 }
-.content3 {
-    font-family: var(--font2);
-    width:;
-    margin: 30px 0;
+#about {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap:10px;
-    background-color: var(--cor3);
-    box-shadow: 2px 2px 5px var(--cor3);
-    border-radius: 20px;
-    padding: 30px;
-
-}
-
-.input-single {
-    position: relative;
-    margin: 5px;
-    
-}
-.input label{
-    position: absolute;
-    top: 0;
-    bottom: 5px;
-    border-radius: 5%;
-    padding: 5px;
-    font-family: var(--font2);
-}
-.input {
-    width: 100%;
-    border: 0;
-    border-bottom: 2px solid var(--cor3);
-    border-radius: 10px;
-    color: var(--cor6);
-    background-color: whitesmoke;
-    padding: 5px;
-    outline: 0;
-
-}
-
-.btn {
-    padding: 5px 15px;
-    margin: 5px;
-    border-radius: 10px;
-    font-family: var(--font1);
-    color: var(--cor6);
-    background-color: whitesmoke;
-    border: 1px solid var(--cor3);
-}
-
-.fa-brands {
-    margin: 10px;
-    size: 20px;
-    width: 20px;
-}
-
-.fa-linkedin-in {
-    color: #0B65C2;
-}
-.fa-free-code-camp {
-    color: white;
-    background: rgba(27, 26, 26, 0.769);
-    border-radius: 50%;
-}
-.fa-github {
-    color: #1F2328;
-}
-
-footer {
+    padding: 100px 10%;
     text-align: center;
-    border-top: 0.5px solid #51553A;
-    margin: 10px;
-    background: var(--cor3);
-    color: var(--cor7);
-
+    gap: 50px;
 }
+
+.profile-photo {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border: 4px solid var(--accent-color);
+}
+
+.info h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+.info p {
+    text-align: justify;
+}
+
+.social-links a, a {
+    color: var(--primary-color);
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover, a {
+    color: var(--accent-color);
+}
+
+/* ===== SEÇÕES DE CURSOS E PROJETOS ===== */
+#courses, #projects {
+    text-align: center;
+    padding: 80px 10%;
+}
+
+#courses p {
+    text-align: justify;
+}
+
+.course-list, .projects-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.course-item, .project-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.course-item:hover, .project-item:hover {
+    transform: scale(1.05);
+}
+
+#projects p {
+    text-align: justify;
+}
+
+
+
+/* ===== SEÇÃO DE CONTATO ===== */
+#contact {
+    text-align: center;
+    padding: 60px 10%;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid var(--primary-color);
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+    height: 120px;
+}
+
+button {
+    background: var(--primary-color);
+    color: white;
+    padding: 12px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: var(--button-hover);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Animação de fade-in */
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Botão de Modo Noturno na Navbar */
+.dark-mode-toggle {
+    background: transparent;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s ease;
+    transform: translateY(-50%);
+    margin-top: 15px;
+}
+
+.dark-mode-toggle:hover {
+    color: var(--accent-color);
+}
+
+/* Estilos do Modo Noturno */
+.dark-mode {
+    background: #121212;
+    color: #f5f5f5;
+}
+
+.dark-mode header, .dark-mode footer {
+    background: #181818;
+}
+
+.dark-mode .course-item, 
+.dark-mode .project-item, 
+.dark-mode form {
+    background: #222;
+    color: white;
+    border: 1px solid var(--accent-color);
+}
+
+.dark-mode input, 
+.dark-mode textarea {
+    background: #333;
+    color: white;
+    border: 1px solid var(--accent-color);
+}
+
+.dark-mode button {
+    background: var(--accent-color);
+    color: black;
+}
+
